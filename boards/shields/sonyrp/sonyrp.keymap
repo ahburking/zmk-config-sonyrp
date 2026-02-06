@@ -18,11 +18,11 @@ behaviors {
             bindings = <&kp N1>, <&mo 1>;
             };
             
-        td_mt2: tap_dance_hold_tap {
+        td2_mt: tap_dance_2_hold_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt N2>, <&kp A>, <&kp B>, <&kp C>;
+            bindings = <&mt N2>, <&kp A>, <&kp B>, <&kp C>, <&kp N2>;
             };
 
         td3: tap_dance_3 {
@@ -89,7 +89,7 @@ behaviors {
             display-name = "base_layer";
             bindings = < 
                 &td0     
-                &td1          &td2     &td3 
+                &td1          &td2_mt     &td3 
                 &td4          &td5     &td6
                 &td7          &td8     &td9
                 &kp LSHIFT    &td10    &kp RET    
