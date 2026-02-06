@@ -82,7 +82,6 @@ behaviors {
             bindings = <&kp N0>, <&kp SPACE>;
             };
         };
-    };
    
     keymap {
         compatible = "zmk,keymap";
@@ -118,3 +117,4 @@ behaviors {
         };
 
     };
+};
