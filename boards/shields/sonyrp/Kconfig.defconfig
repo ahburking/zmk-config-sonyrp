@@ -1,0 +1,6 @@
+if SHIELD_SONYRP
+
+config ZMK_KEYBOARD_NAME
+    default "sonyrp"
+
+endif
