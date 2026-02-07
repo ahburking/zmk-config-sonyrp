@@ -4,21 +4,20 @@
 
 / {
 behaviors {
-        td0: tap_dance_0 {
+        td_mt_0: tap_dance_mod_tap_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp BACKSPACE>;
+            bindings = <&mt BACKSPACE ESC>;
             };  
 
-        td1: tap_dance_1 {
+        td_mt_1: tap_dance_mod_tap_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&mo 1>;
+            bindings = <&mt N1 N1>, <&mo 1>;
             };
 
-    
         td_mt_2: tap_dance_mod_tap_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -26,60 +25,60 @@ behaviors {
             bindings = <&mt N2 A>, <&kp B>, <&kp C>, <&kp N2>;
             };
 
-        td3: tap_dance_3 {
+        td_mt_3: tap_dance_mod_tap_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N3>, <&kp D>, <&kp E>, <&kp F>;
+            bindings = <&mt N3 D>, <&kp E>, <&kp F>, <&kp N3>;
             };
 
-        td4: tap_dance_4 {
+        td_mt_4: tap_dance_mod_tap_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N4>, <&kp G>, <&kp H>, <&kp I>;
+            bindings = <&mt N4 G>, <&kp H>, <&kp I>, <&kp N4>;
             };
 
-        td5: tap_dance_5 {
+        td_mt_5: tap_dance_mod_tap_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N5>, <&kp J>, <&kp K>, <&kp L>;
+            bindings = <&mt N5 J>, <&kp K>, <&kp L>, <&kp N5>;
             };
 
-        td6: tap_dance_6 {
+        td_mt_6: tap_dance_mod_tap_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N6>, <&kp M>, <&kp N>, <&kp O>;
+            bindings = <&mt N6 M>, <&kp N>, <&kp O>, <&kp N6>;
             };
 
-        td7: tap_dance_7 {
+        td_mt_7: tap_dance_mod_tap_7 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N7>, <&kp P>, <&kp Q>, <&kp R>, <&kp S>;
+            bindings = <&mt N7 P>, <&kp Q>, <&kp R>, <&kp S>, <&kp N7>;
             };
 
-        td8: tap_dance_8 {
+        td_mt_8: tap_dance_mod_tap_8 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N8>, <&kp T>, <&kp U>, <&kp V>;
+            bindings = <&mt N8 T>, <&kp U>, <&kp V>, <&kp N8>;
             };
 
-        td9: tap_dance_9 {
+        td_mt_9: tap_dance_mod_tap_9 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N9>, <&kp W>, <&kp X>, <&kp Y>, <&kp Z>;
+            bindings = <&mt N9 Q>, <&kp X>, <&kp Y>, <&kp Z>, <&kp N9>;
             };
 
-        td10: tap_dance_10 {
+        td_mt_10: tap_dance_mod_tap_10 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N0>, <&kp SPACE>;
+            bindings = <&mt N0 SPACE>, <&kp N0>;
             };
         };
    
@@ -89,11 +88,11 @@ behaviors {
         base_layer {
             display-name = "base_layer";
             bindings = < 
-                &td0     
-                &td1          &td_mt_2     &td3 
-                &td4          &td5     &td6
-                &td7          &td8     &td9
-                &kp LSHIFT    &td10    &kp RET    
+                &td_mt_0     
+                &td_mt_1          &td_mt_2     &td_mt_3
+                &td_mt_4          &td_mt_5     &td_mt_6
+                &td_mt_7          &td_mt_8     &td_mt_9
+                &kp LSHIFT        &td_mt_10    &kp RET    
             >;
         }; 
         
